@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #138a98;
+  --secondary-color: #ffffffb3;
+  --background-color: #2F3565;
+  --background-color-two: #f7f6fa;
+  --nav-background: #01030e;
+  --hover-color: #138a98;
+  --hover-shadow-color: rgba(30, 144, 255, 0.8);
+  --text-color: white;
+  --text-muted-color: #ffffffb3;
+  --gradient-start: #1e90ff;
+  --gradient-end: #ffffff;
+  --button-color: #e48c2f;
+
+  /* 2f3565
+  138a98 */
+  /*e1f0f7*/
+
+}
+
+
+
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color-two);
+  color: var(--text-color);
+}

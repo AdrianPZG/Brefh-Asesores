@@ -1,0 +1,168 @@
+/*MAIN*/
+
+/*SECTION1*/
+
+
+
+
+
+
+
+
+.section-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+    color: #000;
+    margin-bottom: 2em;
+    background-color: #f7f6fa;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+@media (min-width: 768px) {
+    .section-one {
+        flex-direction: row; /* Alinear en fila en pantallas grandes */
+        justify-content: space-between;
+        align-items: flex-start; /* Alinear en la parte superior */
+    }
+
+    .section-one .content {
+        padding-left: 1rem; /* Ajuste a la izquierda en pantallas grandes */
+        flex: 1.5; /* Permitir que el contenido ocupe más espacio */
+        text-align: left; /* Alinear el texto a la izquierda en pantallas grandes */
+    }
+
+    .section-one .image {
+        flex: 1; /* Reducir el tamaño del contenedor de la imagen */
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+.section-one h1 {
+    font-size: 3.5rem; /* Tamaño grande en pantallas grandes */
+    margin-bottom: 2rem;
+    line-height: 1.2; /* Ajustar la altura de línea para el texto en varias líneas */
+    max-width: 90%; /* Ajustar el ancho máximo del h1 para que ocupe más espacio */
+    margin-top: 1.5em;
+}
+
+.section-one h1 span {
+    color: var(--hover-color); /* Color azul */
+    /* background: linear-gradient(500deg, #138A98, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 3s ease infinite; */
+}
+
+/* @keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+.section-one p {
+    font-size: 1.2rem; /* Reducir el tamaño del párrafo */
+    margin-bottom: 3rem; /* Reducir el margen inferior */
+    line-height: 1.4; /* Ajustar la altura de línea para el párrafo en varias líneas */
+    max-width: 70%; /* Controlar el ancho máximo del párrafo */
+    text-align: justify;
+    font-weight: 600;
+    color: #52606d;
+}
+
+.section-one .buttons {
+    display: flex;
+    justify-content: left;
+}
+
+.section-one .btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 50px; /* Redondear los botones */
+    cursor: pointer;
+    /* transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; */
+}
+
+.section-one .secondary-btn {
+    background-color: var(--hover-color);
+    color: var(--gradient-end);
+}
+
+.section-one .secondary-btn:hover {
+    background-color: var(--background-color); /* Cambiar a otro color */
+    color: var(--text-color);
+    border-color: var(--text-color);
+    /*transform: scale(1.05); /* Animación de escalado */
+}
+
+@media (max-width: 768px) {
+    .section-one .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Ajuste del espacio entre botones */
+    }
+
+    .section-one .secondary-btn {
+        width: 100%; /* Mayor largo */
+    }
+}
+
+.section-one .image {
+    margin-top: 6rem; /* Ajustar margen superior para pantallas pequeñas */
+    flex: 1; /* Asegura que la imagen tenga espacio suficiente en pantallas pequeñas */
+}
+
+.section-one .responsive-image {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Mantiene la proporción de la imagen */
+    display: block;
+}
+
+/* @keyframes zoom-in-out {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+} */
+
+@media (max-width: 768px) {
+    .section-one h1 {
+        font-size: 2.5rem; /* Tamaño adecuado para pantallas pequeñas */
+        margin-top: 2em;
+        max-width: 90%; /* Ajustar el ancho máximo del h1 para pantallas pequeñas */
+        text-align: left;
+    }
+
+    .section-one p {
+        font-size: 1.1rem; /* Tamaño adecuado para pantallas pequeñas */
+        line-height: 1.8; /* Ajustar la altura de línea para el párrafo en varias líneas */
+        max-width: 90%; /* Ajustar el ancho máximo del párrafo */
+        text-align: left;
+        margin-bottom: 2em;
+    }
+
+    .section-one {
+        text-align: center;
+    }
+}

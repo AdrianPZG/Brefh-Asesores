@@ -1,0 +1,201 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f3f8; 
+    padding: 1rem;
+    color: var(--text-color);
+    position: fixed;  /* Fija la barra en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 6px 7px rgba(0, 0, 0, 0.1);  
+    font-family: Montserrat, sans-serif;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+
+.brand-title {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.logo {
+    height: 55px;
+    margin-left: 10%;
+}
+
+.navbar-links {
+    display: flex;
+    height: 100%;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 0.5rem; /* Aumenta la separación entre los enlaces */
+    padding-right: 7rem;
+}
+
+.navbar-links li {
+    padding: 0 1rem;
+}
+
+.navbar-links a {
+    color: #333333; /* Color negro para todos los enlaces */
+    font-size: 1.1em;
+    text-decoration: none;
+    position: relative;
+    font-weight: 600; /* Similar a negritas */
+    padding: 0.7rem 1rem; /* Añade espacio adicional alrededor del texto */
+    display: inline-block; /* Asegura que el padding y el background se apliquen correctamente */
+}
+
+
+.navbar-links a:not(.contact-button)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 120%; /* Aumenta la altura para hacer el rectángulo más grande */
+    background-color: rgba(0, 60, 255, 0.158); /* Rectángulo gris medio transparente */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-50%); /* Centra el rectángulo verticalmente */
+}
+
+.navbar-links a:hover::before {
+    opacity: 1; /* Efecto de hover en el rectángulo gris */
+}
+
+.navbar-links .contact-button {
+    color: #ffffff; /* Color blanco para el botón de contacto */
+    background-color: var(--background-color); /* Mantiene el fondo azul */
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-weight: 450;
+}
+
+/* .contact-button {
+    color: #ffffff; 
+    background-color: var(--background-color); 
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+} */
+
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 17px;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    height: 2px;
+    width: 19px;
+    background-color: var(--nav-background);
+    border-radius: 10px;
+}
+
+.close-button {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--nav-background);
+    cursor: pointer;
+}
+
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem; /* Ajusta el padding si es necesario */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f4f3f8; /* Mantén el fondo para la versión móvil */
+        box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho */
+        z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    }
+
+    /* Ajusta la posición del logo */
+    .logo {
+        height: 45px; /* Ajusta la altura si es necesario */
+        margin-left: -5%;
+       
+    }
+
+    /* Ajusta el toggle-button */
+    .toggle-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px; /* Ajusta la altura del botón */
+        cursor: pointer;
+        margin-right: 1rem; /* Espacio desde el borde derecho */
+    }
+
+    /* Ajusta la posición del menú desplegable */
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Inicialmente oculto fuera de la pantalla */
+        background-color: hsla(0, 0%, 100%, 0.315); /* Fondo semi-transparente */
+        width: 60%; /* Ocupa todo el ancho en dispositivos móviles */
+        height: 500%;
+        padding: 5rem 1rem 0 2rem; /* Ajusta el padding para que el contenido no se vea cortado */
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        transition: right 0.7s;
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
+        overflow: auto; /* Permite desplazarse si el contenido es más largo */
+    }
+
+    /* Muestra el menú al activar la clase "active" */
+    .navbar-links.active {
+        right: 0;
+    }
+
+    /* Ajustes de los enlaces en el menú desplegable */
+    .navbar-links ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Disposición vertical en móvil */
+    }
+
+    .navbar-links li {
+        padding: 0.5rem 0; /* Ajusta el padding entre los elementos del menú */
+    }
+
+    /* Muestra el botón de cierre en dispositivos móviles */
+    .close-button {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--nav-background);
+        cursor: pointer;
+    }
+}

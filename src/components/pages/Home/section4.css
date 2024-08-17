@@ -1,0 +1,142 @@
+/* SECTION-FOUR */
+.section-four {
+    padding: 4rem 2rem;
+    background: #e0f7fa; /* Color claro para el fondo */
+    color: #003333; /* Texto en color oscuro para contraste */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.image-content {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+}
+
+.section-image {
+    width: 70%;
+    height: auto;
+    border-radius: 0; /* Elimina el borde */
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+    text-align: right; /* Alinea el texto al margen derecho */
+    margin-left: auto; /* Empuja el contenido al margen derecho */
+    text-align: center;
+}
+
+.text-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #138a98; /* Color del título */
+    margin-right: 3rem;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #52606d;
+    font-weight: 600;
+    margin-right: 4rem;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Asegura que las tarjetas estén centradas */
+}
+
+.card {
+    background: #138a98; /* Fondo oscuro para tarjetas */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.705);
+    text-align: center;
+    flex: 1;
+    min-width: 280px; /* Tamaño mínimo para tarjetas */
+    max-width: 320px; /* Tamaño máximo para tarjetas */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+}
+
+.card .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 450;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-four {
+        padding: 2rem 2rem 0rem 2rem;
+    }
+
+    .text-image-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .text-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-right: 0;
+    }
+
+    .image-content {
+        display: none;
+    }
+
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center; /* Alinea las tarjetas al centro */
+    }
+
+    .card {
+        width: 100%; /* Tarjetas ocupan el 100% del ancho en móviles */
+        font-size: 1rem; /* Asegura que el texto no se vea borroso */
+    }
+}
