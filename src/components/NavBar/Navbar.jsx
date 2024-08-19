@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import './Navbar.css';
 import logo from '../assets/BREFH.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -95,7 +96,7 @@ const Navbar = () => {
                 <ul className="nav_list">
                     <li className="nav_item"><a href="index.html">Inicio</a></li>
                     <li className="nav_item"><a href="#nosotros_url">Nosotros</a></li>
-                    <li className="nav_item"><a href="#servicios_url">Servicios</a></li>
+                    <li className="nav_item"><Link to="/services">Servicios</Link></li>
                     <li className="nav_item"><a href="#contacto_url" className="contact-button">Contacto</a></li>
                 </ul>
             </div>
