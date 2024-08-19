@@ -1,0 +1,61 @@
+/*SECTION 1.2*/
+.stats-section {
+    padding: 3rem;
+    background-color: var(--background-color-two);
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto para la animación */
+    transform: translateY(50px); /* Mover hacia abajo inicialmente */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación de entrada */
+    color: var(--hover-color);
+}
+
+.stats-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    flex: 1;
+    padding: 2rem;
+    border-right: 2px solid #ddd;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    font-size: 3rem; /* Aumentar tamaño de número */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        border: none;
+        max-width: 90%;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+}
