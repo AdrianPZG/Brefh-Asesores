@@ -44,6 +44,7 @@ const StatsSection = () => {
 
     return (
         <section className="stats-section">
+            <div className="container">
             <div className="stats-container">
                 <div className="stat-item">
                     <h2 className="stat-number" data-count="1000">+0</h2>
@@ -57,6 +58,7 @@ const StatsSection = () => {
                     <h2 className="stat-number" data-count="98">+0</h2>
                     <p>% Satisfacción de las Empresas</p>
                 </div>
+            </div>
             </div>
         </section>
     );

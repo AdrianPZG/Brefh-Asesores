@@ -1,6 +1,6 @@
 import React from 'react';
-import './section1.css'; // Asegúrate de que la ruta sea correcta
-import robotImage from '../..//assets/robot.png'; // Ajusta la ruta si es necesario
+import './section1.css'; 
+import robotImage from '../..//assets/PORTADA 3.png'; 
 
 const Section1 = () => {
     return (

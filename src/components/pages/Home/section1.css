@@ -15,12 +15,18 @@
     align-items: center;
     padding: 3rem;
     text-align: center;
-    color: #000;
+    color: #fff;
     margin-bottom: 2em;
-    background-color: #f7f6fa;
+    background-image: url('../../assets/PORTADA 2.svg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center top; /* Mueve la imagen hacia arriba */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    /* background-attachment: fixed;  */
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 750px; /* Establece una altura mínima para el contenedor */
 }
+
 
 
 
@@ -53,7 +59,7 @@
 }
 
 .section-one h1 span {
-    color: var(--hover-color); /* Color azul */
+    color: #aaf2f5; /* Color azul */
     /* background: linear-gradient(500deg, #138A98, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -79,7 +85,7 @@
     max-width: 70%; /* Controlar el ancho máximo del párrafo */
     text-align: justify;
     font-weight: 600;
-    color: #52606d;
+    color: #d9dfe6;
 }
 
 .section-one .buttons {
@@ -121,15 +127,17 @@
 }
 
 .section-one .image {
-    margin-top: 6rem; /* Ajustar margen superior para pantallas pequeñas */
-    flex: 1; /* Asegura que la imagen tenga espacio suficiente en pantallas pequeñas */
+    margin-top: 13rem; /* Ajusta el margen superior para pantallas pequeñas */
+    flex: 1; /* Asegura que el contenedor de la imagen tenga suficiente espacio */
+    max-width: 100%; /* Asegura que el contenedor no exceda el ancho del contenedor principal */
 }
 
 .section-one .responsive-image {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    height: 100%; /* Mantiene la proporción de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
     display: block;
 }
+
 
 /* @keyframes zoom-in-out {
     0% {
@@ -164,5 +172,16 @@
 
     .section-one {
         text-align: center;
+        background-size: cover; /* Mantiene la imagen cubierta */
+        background-position: center; /* Centra la imagen en el contenedor */
+        /* background-attachment: fixed;  */
+        background-size: auto 200%; 
+        background-position: center top;
+    }
+
+    .section-one .buttons {
+        display: flex;
+        justify-content: left;
+        margin-bottom: -10rem;
     }
 }

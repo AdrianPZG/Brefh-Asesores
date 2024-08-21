@@ -82,7 +82,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="brand-title">
-                <a href="index.html" aria-label="Volver a la página de inicio">
+                <a href="/" aria-label="Volver a la página de inicio">
                     <img src={logo} alt="Logo" className="logo" />
                 </a>
             </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
             <div className="navbar-links">
                 <button className="close-button" aria-label="Close Menu">&times;</button>
                 <ul className="nav_list">
-                    <li className="nav_item"><a href="index.html">Inicio</a></li>
+                    <li className="nav_item"><a href="/">Inicio</a></li>
                     <li className="nav_item"><a href="#nosotros_url">Nosotros</a></li>
                     <li className="nav_item"><Link to="/services">Servicios</Link></li>
                     <li className="nav_item"><a href="#contacto_url" className="contact-button">Contacto</a></li>
