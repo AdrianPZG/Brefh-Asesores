@@ -22,7 +22,7 @@
     background-position: center top; /* Mueve la imagen hacia arriba */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     /* background-attachment: fixed;  */
-    max-width: 1200px;
+    max-width: 1900px;
     margin: 0 auto;
     min-height: 750px; /* Establece una altura mínima para el contenedor */
 }
@@ -105,11 +105,25 @@
 .section-one .secondary-btn {
     background-color: var(--hover-color);
     color: var(--gradient-end);
+    text-decoration: none;
 }
 
 .section-one .secondary-btn:hover {
     background-color: var(--background-color); /* Cambiar a otro color */
     color: var(--text-color);
+    border-color: var(--text-color);
+    /*transform: scale(1.05); /* Animación de escalado */
+}
+
+.section-one .terciary-btn {
+    margin-left: 1em;
+    background-color: #fff;
+    color: var(--background-color);
+}
+
+.section-one .terciary-btn:hover {
+    background-color: #2f3565; /* Cambiar a otro color */
+    color: #fff;
     border-color: var(--text-color);
     /*transform: scale(1.05); /* Animación de escalado */
 }

@@ -3,6 +3,7 @@
     padding: 4rem 2rem;
     background: #e0f7fa; /* Color claro para el fondo */
     color: #003333; /* Texto en color oscuro para contraste */
+    background: linear-gradient(to right, #138a98, #2f3565);
 }
 
 .container {
@@ -21,8 +22,8 @@
 
 .image-content {
     flex: 1;
-    max-width: 40%;
-    text-align: center;
+    max-width: 60%;
+    text-align: left;
 }
 
 .section-image {
@@ -42,14 +43,14 @@
 .text-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: #138a98; /* Color del título */
+    color: #fff; /* Color del título */
     margin-right: 3rem;
 }
 
 .text-content p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #52606d;
+    color: #fff;
     font-weight: 600;
     margin-right: 4rem;
 }
@@ -62,8 +63,8 @@
 }
 
 .card {
-    background: #138a98; /* Fondo oscuro para tarjetas */
-    color: #fff;
+    background: #fff; /* Fondo oscuro para tarjetas */
+    color: #000;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.705);

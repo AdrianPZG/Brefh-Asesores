@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import './section2.css'; // Asegúrate de que el archivo CSS esté correctamente enlazado
+import './section2.css'; 
+import { Link } from 'react-router-dom';
 
 // Importa las imágenes
 import servicioImage1 from '../../assets/servicios_1.jpg';
@@ -48,7 +49,7 @@ const SectionTwo = () => {
                     <img src={servicioImage1} alt="Reclutamiento y Selección" className="service-image" />
                     <h3>Reclutamiento y Selección</h3>
                     <p>Encuentra y contrata a los mejores talentos para tu empresa, optimizando la calidad del trabajo y fortaleciendo tu equipo.</p>
-                    <a href="#servicios_url" className="more-info">Conoce más</a>
+                    <Link to="/services" className='more-info'>Conoce más</Link>
                 </div>
                 <div className="service-card" ref={el => (serviceCardsRef.current[1] = el)}>
                     <img src={servicioImage1} alt="Desarrollo Organizacional" className="service-image" />
@@ -69,7 +70,6 @@ const SectionTwo = () => {
                     <a href="#servicios_url" className="more-info">Conoce más</a>
                 </div>
             </div>
-            <a href="/servicio1.html" className="cta-button">IR A SERVICIOS</a>
             </div>
         </section>
     );

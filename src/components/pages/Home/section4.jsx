@@ -2,7 +2,7 @@ import React from 'react';
 import './section4.css'; // Asegúrate de que el archivo CSS esté correctamente enlazado
 
 // Importa la imagen
-import sectionImage from '../../assets/robot.png';
+import sectionImage from '../../assets/POR QUE ELEGIR BREFH.svg';
 
 const SectionFour = () => {
     return (

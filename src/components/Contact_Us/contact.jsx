@@ -31,7 +31,7 @@ const ContactUs = () => {
                     {/* Formulario de contacto */}
                     <div className="contact-form">
                         <img src={empresaImage} alt="Imagen de la empresa" className="contact-img" />
-                        <form action="https://formsubmit.co/perez.galicia.adrian589@gmail.com" method="POST">
+                        <form action="https://formsubmit.co/adrian@breasesores.com" method="POST">
                             <div className="form-group">
                                 <input type="text" id="name" name="name" placeholder="Nombre" required />
                             </div>

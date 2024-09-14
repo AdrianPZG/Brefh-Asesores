@@ -1,76 +1,251 @@
+/* ---- Estilo general para la sección ---- */
 .servicios {
-    font-family: Arial, sans-serif;
-    color: #333;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ---- Estilo para la imagen de fondo ---- */
+.imagen-fondo {
+  background-image: url('../../assets/R&S.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contenido-centrado {
+  text-align: center;
+}
+
+.contenido-centrado h1{
+  font-size: 3em;
+}
+
+/* ---- Estilo para el botón ---- */
+.boton-cotiza {
+  background-color: #fff;
+  color: #2f3565;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.boton-cotiza:hover {
+  background-color: #2f3565;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+
+
+/* ---- Sección Reclutamiento y Selección ---- */
+.reclutamiento-seleccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5%;
+}
+
+.texto-izquierda {
+  width: 50%;
+  text-align: justify;
+}
+
+.texto-izquierda h1 {
+  font-size: 2.5rem;
+  color: #2f3565;
+}
+
+.texto-izquierda p {
+  color: #000;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-top: 17px;
+}
+
+.texto-destacado {
+  color: #2f3565;
+  font-weight: 500;
+}
+
+.imagen-derecha {
+  width: 40%;
+}
+
+.imagen-derecha img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+.seccion-contacto {
+  padding: 50px 10%;
+  background: linear-gradient(to right, #138a98, #2f3565);
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.texto-contacto {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.boton-contactanos {
+  background-color: #fff;
+  color: #2f3565;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.boton-contactanos:hover {
+  background-color: #2f3565;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ---- Nueva Sección de Servicios con Menú ---- */
+.seccion-servicios {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 5%;
+  background-color: #f8f9fa;
+}
+
+.imagen-servicios {
+  width: 45%;
+}
+
+.imagen-servicios img {
+  width: 75%;
+  margin: 2em 0 0 3em;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-servicios {
+  width: 50%;
+  padding-left: 30px;
+}
+
+.menu-servicios h1 {
+  font-size: 2.5rem;
+  color: #2f3565;
+  margin-bottom: 20px;
+}
+
+.menu-servicios ul {
+  list-style-type: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-servicios ul.single-service li:not(.active) {
+  display: none;
+}
+
+.menu-servicios ul li {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #138a98;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-servicios ul li:hover {
+  color: #2f3565;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.menu-servicios ul li.active {
+  color: #fff;
+  background-color: hsla(233, 36%, 29%, 0.815);
+}
+
+.detalle-servicio {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 20px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-servicios ul li.active .detalle-servicio {
+  max-height: 300px;
+  padding: 20px;
+}
+
+.detalle-servicio p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+.menu-servicios ul li.active .detalle-servicio p {
+  opacity: 1;
+}
+
+/* ---- RESPONSIVIDAD ---- */
+@media (max-width: 1024px) {
+  .reclutamiento-seleccion,
+  .seccion-servicios {
+    flex-direction: column;
   }
-  
-  .servicios-header {
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-bottom: 2px solid #ddd;
+
+  .texto-izquierda,
+  .imagen-derecha,
+  .imagen-servicios,
+  .menu-servicios {
+    width: 100%;
   }
-  
-  .servicios-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+
+  .menu-servicios {
+    padding-left: 0;
   }
-  
-  .servicios-header p {
-    font-size: 1.2rem;
-  }
-  
-  .servicios-descripcion,
-  .servicios-proceso,
-  .servicios-beneficios,
-  .servicios-testimonios,
-  .servicios-contacto {
-    margin: 20px 0;
-  }
-  
-  .servicios-descripcion h2,
-  .servicios-proceso h2,
-  .servicios-beneficios h2,
-  .servicios-testimonios h2,
-  .servicios-contacto h2 {
+}
+
+@media (max-width: 768px) {
+  .texto-izquierda h1,
+  .menu-servicios h1 {
     font-size: 2rem;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
   }
-  
-  .servicios-proceso ol {
-    margin: 0;
-    padding-left: 20px;
+
+  .menu-servicios ul li,
+  .detalle-servicio p {
+    font-size: 1rem;
   }
-  
-  .servicios-proceso li {
-    margin-bottom: 10px;
-  }
-  
-  .servicios-beneficios ul {
-    margin: 0;
-    padding-left: 20px;
-    list-style-type: disc;
-  }
-  
-  .servicios-beneficios li {
-    margin-bottom: 10px;
-  }
-  
-  .servicios-testimonios {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .servicios-testimonios .testimonio {
-    margin-bottom: 20px;
-  }
-  
-  .servicios-contacto p {
-    margin: 5px 0;
-  }
-  
+}

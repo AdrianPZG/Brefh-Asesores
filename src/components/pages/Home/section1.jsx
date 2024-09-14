@@ -18,7 +18,8 @@ const Section1 = () => {
                     estratégico en el camino hacia el éxito.
                 </p>
                 <div className="buttons">
-                    <button className="btn secondary-btn">¡CONTÁCTANOS!</button>
+                    <a href="#contacto_url" className="btn secondary-btn">CONTÁCTANOS</a>
+                    <button className="btn terciary-btn">COTIZA</button>
                 </div>
             </div>
             <div className="image">
